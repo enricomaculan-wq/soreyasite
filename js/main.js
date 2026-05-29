@@ -69,15 +69,4 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     reveals.forEach((el) => el.classList.add("reveal--visible"));
   }
-
-  if (window.SOREYA_SITE?.analyticsId && window.plausible) {
-    return;
-  }
-  if (window.SOREYA_SITE?.analyticsId) {
-    const s = document.createElement("script");
-    s.defer = true;
-    s.dataset.domain = window.SOREYA_SITE.analyticsId;
-    s.src = "https://plausible.io/js/script.js";
-    document.head.appendChild(s);
-  }
 });

@@ -6,7 +6,6 @@ window.SOREYA_SITE = {
     "Ciao, vorrei informazioni su Soreya Assistant.",
   whatsappCalculator:
     "Ciao, ho provato il calcolatore sul sito e vorrei capire come Soreya Assistant può aiutarmi.",
-  analyticsId: "",
 };
 
 window.soreyaWhatsAppUrl = function (message) {
