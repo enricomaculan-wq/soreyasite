@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.soreya.app" }],
+      "destination": "https://soreya.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.soreya.it" }],
+      "destination": "https://soreya.it/:path*",
+      "permanent": true
+    }
+  ]
+}
