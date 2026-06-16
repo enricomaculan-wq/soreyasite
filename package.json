@@ -1,0 +1,9 @@
+{
+  "name": "soreya-site-pages",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "vercel dev",
+    "preview": "npx --yes serve dist -p 8080"
+  }
+}

@@ -1,0 +1,425 @@
+/* WMF landing — Soreya B2B */
+
+.wmf-page {
+  --accent: #67e8f9;
+  --accent-soft: rgba(103, 232, 249, 0.1);
+  --accent-border: rgba(103, 232, 249, 0.28);
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-border: rgba(255, 255, 255, 0.08);
+}
+
+.wmf-page .hero__eyebrow,
+.wmf-page .section__label,
+.wmf-page .split__eyebrow {
+  color: var(--accent);
+}
+
+.wmf-page .btn--accent {
+  background: var(--accent);
+  color: #0a0a0a;
+}
+
+.wmf-page .btn--accent:hover {
+  filter: brightness(1.06);
+  background: #7eeaff;
+}
+
+.wmf-page .btn--ghost {
+  border-color: var(--accent-border);
+}
+
+.wmf-page .btn--ghost:hover {
+  background: var(--accent-soft);
+  border-color: rgba(103, 232, 249, 0.4);
+}
+
+/* Hero compatto (QR / mobile) */
+
+.wmf-hero {
+  position: relative;
+  min-height: auto;
+  padding: calc(var(--nav-h) + 56px) 24px 72px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.wmf-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(103, 232, 249, 0.14), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(59, 108, 255, 0.1), transparent 50%),
+    linear-gradient(180deg, #0d1528 0%, #0a0a0a 100%);
+}
+
+.wmf-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.wmf-hero__tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 100px;
+  background: var(--accent-soft);
+}
+
+.wmf-hero__title {
+  font-size: clamp(2.75rem, 8vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.wmf-hero__subtitle {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.wmf-hero__desc {
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.65;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.wmf-hero__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Sezioni */
+
+.wmf-section {
+  padding: 72px 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.wmf-section--alt {
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--surface-border);
+  border-bottom: 1px solid var(--surface-border);
+  max-width: none;
+}
+
+.wmf-section--alt .wmf-section__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.wmf-section__title {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.wmf-section__lead {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.65;
+  max-width: 720px;
+}
+
+.wmf-section__lead--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Card grid */
+
+.wmf-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.wmf-card {
+  padding: 28px 24px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  transition: border-color 0.25s var(--ease);
+}
+
+.wmf-card:hover {
+  border-color: var(--accent-border);
+}
+
+.wmf-card__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+}
+
+.wmf-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.wmf-card__text {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.6;
+}
+
+/* Canali */
+
+.wmf-channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.wmf-channel {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.wmf-channel:hover {
+  border-color: var(--accent-border);
+}
+
+.wmf-note {
+  margin-top: 24px;
+  padding: 14px 18px;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.55;
+  border-left: 2px solid var(--accent-border);
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Partner */
+
+.wmf-partner {
+  margin-top: 40px;
+  padding: 36px 32px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(103, 232, 249, 0.06), rgba(59, 108, 255, 0.06));
+  border: 1px solid var(--surface-border);
+}
+
+.wmf-partner__text {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+  max-width: 820px;
+}
+
+/* Form */
+
+.wmf-form-section {
+  padding: 80px 24px 100px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.wmf-form-section__title {
+  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.wmf-form-section__lead {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.wmf-form {
+  display: grid;
+  gap: 16px;
+}
+
+.wmf-field label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 6px;
+}
+
+.wmf-field input,
+.wmf-field select,
+.wmf-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--font);
+  font-size: 0.9375rem;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.wmf-field input:focus,
+.wmf-field select:focus,
+.wmf-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.wmf-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.wmf-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.wmf-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.wmf-field--hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.wmf-form__submit {
+  margin-top: 8px;
+}
+
+.wmf-form__submit .btn {
+  width: 100%;
+  padding: 14px 28px;
+}
+
+.wmf-form__success {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 10px;
+}
+
+.wmf-form__success.is-visible {
+  display: block;
+}
+
+.wmf-form__error {
+  display: none;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 8px;
+}
+
+.wmf-form__error.is-visible {
+  display: block;
+}
+
+.wmf-form.is-submitting .wmf-form__submit .btn {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.wmf-form.is-submitted .wmf-form__fields {
+  display: none;
+}
+
+/* CTA finale */
+
+.wmf-cta {
+  padding: 80px 24px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(103, 232, 249, 0.08), transparent 60%),
+    var(--black);
+  border-top: 1px solid var(--surface-border);
+}
+
+.wmf-cta__title {
+  font-size: clamp(1.375rem, 3.5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  max-width: 640px;
+  margin: 0 auto 28px;
+  line-height: 1.3;
+}
+
+.wmf-cta__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .wmf-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .wmf-section {
+    padding: 56px 20px;
+  }
+
+  .wmf-hero {
+    padding: calc(var(--nav-h) + 40px) 20px 56px;
+  }
+}
